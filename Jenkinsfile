@@ -1,11 +1,11 @@
-node (Test) {
+node () {
       stage('Checkout'){
       'https://github.com/Kiran-29/Website-29.git'
       }
       stage('Build'){
-       sh  'mvn -B -V -U -e clean package'
+       Build
      }
      stage('Deploy'){
-      sh 'cd /var/www/html sudo cp /home/ubuntu/jenkins/workspace/Test/* .'
+      sh 'cd /var/www/html sudo cp /var/lib/jenkins/Pipeline Script2* .'
 }
 }      
