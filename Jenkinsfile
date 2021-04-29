@@ -1,7 +1,5 @@
-pipeline {
-      agent any
-      
-      stages {
+node(){
+            stages {
             stage ('compile')
             steps {
                   withMaven(maven : 'Maven') {
