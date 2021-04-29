@@ -1,11 +1,12 @@
-node () {
-      stage('Checkout'){
-      'https://github.com/Kiran-29/Website-29.git'
+pipeline {
+      agent any
+      
+      stages {
+            stage ('compile')
+            steps {
+                  withMaven(maven : 'Maven') {
+                        sh 'mvn clean compile'
+                  }
+            }
       }
-      stage('Build'){
-       Build
-     }
-     stage('Deploy'){
-      sh 'cd /var/www/html sudo cp /var/lib/jenkins/Pipeline Script2* .'
-}
-}      
+            
