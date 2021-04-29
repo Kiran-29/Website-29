@@ -8,4 +8,4 @@ node (Test) {
      stage('Deploy'){
       sh 'cd /var/www/html sudo cp /home/ubuntu/jenkins/workspace/Test/* .'
 }
-      
+}      
